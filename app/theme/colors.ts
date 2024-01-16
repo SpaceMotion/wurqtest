@@ -35,6 +35,13 @@ const palette = {
 
   overlay20: "rgba(25, 16, 21, 0.2)",
   overlay50: "rgba(25, 16, 21, 0.5)",
+  charcoal: '#333F48',
+  darkGunmetal: '#1F262B',
+  washedBlack: '#20262A',
+  mintGreen: '#A8FF89',
+  gray: '#7B7B7B',
+  rocketMetallic: '#8C8279',
+  infinity: '#222B31',
 } as const
 
 export const colors = {

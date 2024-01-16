@@ -8,7 +8,7 @@
 import { ApiResponse, ApisauceInstance, create } from "apisauce"
 import Config from "../../config"
 import { GeneralApiProblem, getGeneralApiProblem } from "./apiProblem"
-import type { ApiConfig, ApiFeedResponse } from "./api.types"
+import type { ApiConfig, ApiFeedResponse, ApiHistory } from "./api.types"
 import type { EpisodeSnapshotIn } from "../../models/Episode"
 
 /**
@@ -73,6 +73,22 @@ export class Api {
       }
       return { kind: "bad-data" }
     }
+  }
+
+  async getHistory(): Promise<ApiHistory | GeneralApiProblem | null> {
+    const response: ApiResponse<ApiHistory> = await this.apisauce.get(
+      `Prod/history`,
+    )
+
+    if (!response.ok) {
+      const problem = getGeneralApiProblem(response)
+
+      if (problem)
+        return problem
+      return null
+    }
+
+    return response.data as ApiHistory
   }
 }
 

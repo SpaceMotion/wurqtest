@@ -9,6 +9,12 @@ import {
   SpaceGrotesk_600SemiBold as spaceGroteskSemiBold,
   SpaceGrotesk_700Bold as spaceGroteskBold,
 } from "@expo-google-fonts/space-grotesk"
+import {
+  Montserrat_600SemiBold as montserratSemiBold,
+  Montserrat_500Medium as montserratMedium,
+  Montserrat_400Regular as montserratRegular,
+  Montserrat_700Bold as montserratBold,
+} from "@expo-google-fonts/montserrat"
 
 export const customFontsToLoad = {
   spaceGroteskLight,
@@ -16,6 +22,10 @@ export const customFontsToLoad = {
   spaceGroteskMedium,
   spaceGroteskSemiBold,
   spaceGroteskBold,
+  montserratSemiBold,
+  montserratMedium,
+  montserratRegular,
+  montserratBold,
 }
 
 const fonts = {
@@ -49,6 +59,12 @@ const fonts = {
     // Android only font.
     normal: "monospace",
   },
+  montserrat: {
+    semiBold: 'montserratSemiBold',
+    medium: 'montserratMedium',
+    regular: 'montserratRegular',
+    bold: 'montserratBold',
+  }
 }
 
 export const typography = {

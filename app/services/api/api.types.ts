@@ -34,6 +34,19 @@ export interface ApiFeedResponse {
   items: EpisodeItem[]
 }
 
+export interface ApiHistory {
+  points_per_wod: number[]
+  history: {
+    date_time: string
+    name: string
+    time: number
+    rest: number
+    hr: number
+    points: number
+    exercises: string
+  }[]
+}
+
 /**
  * The options used to configure apisauce.
  */
